@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style6.css">
+    <title>Criar um serviço</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="logo.ge.png">
+        <form id="mainForm" novalidate>
+            <h2>Criar um Serviço</h2>
+            <div class="form-control">
+                <label for="name">Nome</label>
+                <input type="text" id="name" placeholder="Enter your name" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="Salario">Salario</label>
+                <input type="text" id="Salario" placeholder="insira o Salario" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="Localizacao">Localizaçao</label>
+                <input type="text" id="Localizacao" placeholder="insira a  Localizaçao" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="DataHora">Data e hora</label>
+                <input type="text" id="DataHora" placeholder="insira a Data e hora (YYYY-MM-DD HH:MM)" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="vagas">Vagas</label>
+                <input type="text" id="vagas" placeholder="insira o numero de vagas" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-control">
+                <label for="TipoServico">Tipo de serviço</label>
+                <input type="text" id="TipoServico" placeholder="insira o tipo de serviço" autocomplete="off">
+                <i class="icon"></i>
+            </div>
+
+            <button type="submit">Criar</button>
+
+        </form>
+
+    </div>
+    <div id="successModal" class="modal" style="display:none">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeSuccessModal()">&times;</span>
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h2>Success!</h2>
+            <p>Your service has been submitted successfully.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("mainForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            openSuccessModal();
+        });
+
+        function openSuccessModal() {
+            document.getElementById("successModal").style.display = "block";
+        }
+        function closeSuccessModal() {
+            document.getElementById("successModal").style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>
